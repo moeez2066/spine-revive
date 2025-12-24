@@ -8,18 +8,21 @@ const BlogSection = () => {
       author: "dev",
       title: "Mobilize Your Spine and Say Goodbye to Stiffness!",
       excerpt: "Back stiffness is becoming increasingly common. But you cannot just agonize this forever! You need to get out of this irksome sitch. You definitely require some fruitful tips to relish pain-free moments.",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
     {
       date: "October 2, 2017",
       author: "dev",
       title: "Wait, There is Something Wrong with Your Kid's Backpack!",
       excerpt: "Many of us underestimate the very small things in our lives. Backpack is an utmost example. Whether you are going to school or you are going to travel, backpack will be there.",
+      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
     {
       date: "October 2, 2017",
       author: "dev",
       title: "Avoiding Plane Rides Just Because of Backache? Read This!",
       excerpt: "Everyone adores airplane rides! You will love to go to Switzerland and France via airplane. But this back pain, it really hurts right? Imagine you are going to this beautiful trip.",
+      image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
   ];
 
@@ -37,16 +40,17 @@ const BlogSection = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {articles.map((article, index) => (
+          {articles.map((article) => (
             <article
               key={article.title}
               className="group bg-card rounded-2xl overflow-hidden shadow-soft border border-border/50 hover:border-primary/30 hover:shadow-card transition-all duration-300"
             >
-              {/* Image placeholder */}
-              <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <div className="w-16 h-16 bg-primary/30 rounded-full flex items-center justify-center">
-                  <span className="text-3xl">📰</span>
-                </div>
+              <div className="aspect-video overflow-hidden">
+                <img 
+                  src={article.image} 
+                  alt={article.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
               
               <div className="p-6">

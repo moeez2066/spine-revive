@@ -9,7 +9,6 @@ const Header = () => {
     { label: "Home", href: "#" },
     { label: "Treatments", href: "#treatments" },
     { label: "Why KKT", href: "#why-kkt" },
-    { label: "Success Stories", href: "#testimonials" },
     { label: "Blogs", href: "#blogs" },
     { label: "Contact", href: "#appointment" },
   ];
