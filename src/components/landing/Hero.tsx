@@ -32,7 +32,7 @@ const Hero = () => {
           alt="Modern medical facility"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/60 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/0 via-background/100 to-background/0" />
       </div>
 
       {/* Decorative elements */}
