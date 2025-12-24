@@ -3,7 +3,6 @@ import Hero from "@/components/landing/Hero";
 import About from "@/components/landing/About";
 import Conditions from "@/components/landing/Conditions";
 import TreatmentProcess from "@/components/landing/TreatmentProcess";
-import Specialists from "@/components/landing/Specialists";
 import AppointmentForm from "@/components/landing/AppointmentForm";
 import WhyKKT from "@/components/landing/WhyKKT";
 import Testimonials from "@/components/landing/Testimonials";
@@ -20,7 +19,6 @@ const Index = () => {
         <About />
         <Conditions />
         <TreatmentProcess />
-        <Specialists />
         <AppointmentForm />
         <WhyKKT />
         <Testimonials />
