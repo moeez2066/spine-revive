@@ -30,7 +30,7 @@ const About = () => {
                 Our mission is to introduce technological advancements in orthopedics by making globally recognized, non-surgical treatments accessible to patients and setting new standards for safe and effective musculoskeletal care.
               </p>
               <p>
-                Since opening Pakistan's first research-focused Orthopedic and Spine Treatment Center in Lahore in 2012; KKT has expanded to 8 centers across 6 cities—offering evidence-based, non-invasive care to restore movement and relieve pain nationwide.
+                KKT Australia brings this world-class technology to provide evidence-based, non-invasive care to restore movement and relieve pain for Australians nationwide.
               </p>
               <p className="font-medium text-foreground">
                 Our technology is approved by leading health regulatory bodies, including Health Canada and the FDA, underscoring our commitment to safe and effective treatment at every orthopedic hospital and spine center in our network.
@@ -53,24 +53,25 @@ const About = () => {
             </div>
           </div>
 
-          {/* Visual */}
+          {/* Visual with Image */}
           <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl overflow-hidden relative">
-              <div className="absolute inset-4 bg-card rounded-2xl shadow-card flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Stethoscope className="w-12 h-12 text-primary-foreground" />
-                  </div>
-                  <h3 className="font-serif text-2xl font-bold text-foreground mb-2">20+ Years</h3>
-                  <p className="text-muted-foreground">of pioneering non-invasive orthopedic care</p>
-                </div>
+            <div className="aspect-square rounded-3xl overflow-hidden relative">
+              <img 
+                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&auto=format&fit=crop&q=80" 
+                alt="Modern spine treatment center"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+              <div className="absolute bottom-8 left-8 right-8 text-white">
+                <h3 className="font-serif text-2xl font-bold mb-2">20+ Years</h3>
+                <p className="text-white/90">of pioneering non-invasive orthopedic care</p>
               </div>
             </div>
             
             {/* Floating badge */}
             <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground rounded-2xl p-4 shadow-glow">
-              <div className="font-serif text-2xl font-bold">8</div>
-              <div className="text-sm">Centers in Pakistan</div>
+              <div className="font-serif text-2xl font-bold">28</div>
+              <div className="text-sm">Centers Worldwide</div>
             </div>
           </div>
         </div>

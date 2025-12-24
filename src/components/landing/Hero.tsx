@@ -24,12 +24,22 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen bg-gradient-hero pt-32 pb-16 overflow-hidden">
+    <section className="relative min-h-screen pt-32 pb-16 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1920&auto=format&fit=crop&q=80" 
+          alt="Modern medical facility"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/70" />
+      </div>
+
       {/* Decorative elements */}
-      <div className="absolute top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute top-20 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
 
-      <div className="container relative">
+      <div className="container relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6 animate-fade-in">
             Worldwide Presence
@@ -42,8 +52,8 @@ const Hero = () => {
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Pakistan's leading orthopedic clinic offering breakthrough non-invasive treatment tailored for individuals with spine-related disorders.
+          <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            Australia's premier orthopedic clinic offering breakthrough non-invasive treatment tailored for individuals with spine-related disorders.
           </p>
           
           <Button 
@@ -60,7 +70,7 @@ const Hero = () => {
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className="bg-card rounded-2xl p-6 shadow-card border border-border/50 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 animate-fade-in"
+              className="bg-card/95 backdrop-blur-sm rounded-2xl p-6 shadow-card border border-border/50 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 animate-fade-in"
               style={{ animationDelay: `${0.4 + index * 0.1}s` }}
             >
               <div className="flex items-start gap-4">

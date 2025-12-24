@@ -13,13 +13,11 @@ const Footer = () => {
 
   const quickLinks = [
     { label: "Why KKT", href: "#why-kkt" },
-    { label: "Locations", href: "#locations" },
-    { label: "Our Doctors", href: "#team" },
+    { label: "Treatment Process", href: "#process" },
     { label: "Success Stories", href: "#testimonials" },
     { label: "Appointment", href: "#appointment" },
+    { label: "FAQs", href: "#faq" },
   ];
-
-  const cities = ["Karachi", "Lahore", "Multan", "Rawalpindi", "Faisalabad", "Peshawar"];
 
   return (
     <footer className="bg-foreground text-background">
@@ -33,7 +31,7 @@ const Footer = () => {
                 <span className="text-primary-foreground font-serif font-bold text-xl">KKT</span>
               </div>
               <div>
-                <span className="font-serif font-semibold text-lg">KKT Pakistan</span>
+                <span className="font-serif font-semibold text-lg">KKT Australia</span>
               </div>
             </div>
             
@@ -90,44 +88,26 @@ const Footer = () => {
             
             <div className="space-y-4">
               <a
-                href="tel:03481112558"
+                href="tel:1300558558"
                 className="flex items-center gap-3 text-background/70 hover:text-accent transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                <span>0348 1112558</span>
+                <span>1300 558 558</span>
               </a>
               
               <a
-                href="tel:080000558"
-                className="flex items-center gap-3 text-background/70 hover:text-accent transition-colors"
-              >
-                <Phone className="w-5 h-5" />
-                <span>0800 00558</span>
-              </a>
-              
-              <a
-                href="mailto:info@kktpakistan.com"
+                href="mailto:info@kktaustralia.com.au"
                 className="flex items-center gap-3 text-background/70 hover:text-accent transition-colors"
               >
                 <Mail className="w-5 h-5" />
-                <span>info@kktpakistan.com</span>
+                <span>info@kktaustralia.com.au</span>
               </a>
+              
+              <div className="flex items-start gap-3 text-background/70">
+                <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                <span>Sydney, Melbourne, Brisbane, Australia</span>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Cities bar */}
-      <div className="border-t border-background/10">
-        <div className="container py-4">
-          <div className="flex flex-wrap items-center justify-center gap-2 text-sm text-background/60">
-            {cities.map((city, index) => (
-              <span key={city} className="flex items-center gap-2">
-                <MapPin className="w-3 h-3" />
-                {city}
-                {index < cities.length - 1 && <span className="mx-2">–</span>}
-              </span>
-            ))}
           </div>
         </div>
       </div>
@@ -136,14 +116,12 @@ const Footer = () => {
       <div className="border-t border-background/10">
         <div className="container py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-background/60">
-            <p>©2025 KKT, All Rights Reserved.</p>
+            <p>©2025 KKT Australia, All Rights Reserved.</p>
             
-            <div className="flex items-center gap-6">
-              <a href="#" className="hover:text-accent transition-colors">Terms & Conditions</a>
-              <span>–</span>
-              <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
-              <span>–</span>
-              <a href="#" className="hover:text-accent transition-colors">Cookies</a>
+            <div className="flex items-center gap-4">
+              <span>Orthopedic Spine Center</span>
+              <span className="hidden md:inline">–</span>
+              <span className="hidden md:inline">Non-Surgical Treatment</span>
             </div>
           </div>
         </div>

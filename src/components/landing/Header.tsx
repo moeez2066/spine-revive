@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Menu, X, Search } from "lucide-react";
+import { Phone, Menu, X, Mail, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -9,10 +9,9 @@ const Header = () => {
     { label: "Home", href: "#" },
     { label: "Treatments", href: "#treatments" },
     { label: "Why KKT", href: "#why-kkt" },
-    { label: "Team", href: "#team" },
     { label: "Success Stories", href: "#testimonials" },
     { label: "Blogs", href: "#blogs" },
-    { label: "Locations", href: "#locations" },
+    { label: "Contact", href: "#appointment" },
   ];
 
   return (
@@ -21,18 +20,18 @@ const Header = () => {
       <div className="bg-primary text-primary-foreground py-2">
         <div className="container flex justify-between items-center text-sm">
           <div className="flex items-center gap-4">
-            <a href="tel:080000558" className="flex items-center gap-1 hover:text-accent transition-colors">
+            <a href="tel:1300558558" className="flex items-center gap-1 hover:text-accent transition-colors">
               <Phone className="w-3 h-3" />
-              <span>0800-00-558</span>
+              <span>1300 558 558</span>
             </a>
-            <a href="tel:03481112558" className="flex items-center gap-1 hover:text-accent transition-colors">
-              <Phone className="w-3 h-3" />
-              <span>0348 1112558</span>
+            <a href="mailto:info@kktaustralia.com.au" className="flex items-center gap-1 hover:text-accent transition-colors">
+              <Mail className="w-3 h-3" />
+              <span>info@kktaustralia.com.au</span>
             </a>
           </div>
-          <div className="hidden md:flex items-center gap-2">
-            <Search className="w-4 h-4" />
-            <span className="text-primary-foreground/70">Search...</span>
+          <div className="hidden md:flex items-center gap-2 text-primary-foreground/90">
+            <Clock className="w-4 h-4" />
+            <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
           </div>
         </div>
       </div>
@@ -46,7 +45,7 @@ const Header = () => {
               <span className="text-primary-foreground font-serif font-bold text-xl">KKT</span>
             </div>
             <div className="hidden sm:block">
-              <span className="font-serif font-semibold text-lg text-foreground">KKT Pakistan</span>
+              <span className="font-serif font-semibold text-lg text-foreground">KKT Australia</span>
               <p className="text-xs text-muted-foreground">Orthopedic Spine Center</p>
             </div>
           </a>
