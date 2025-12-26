@@ -31,7 +31,7 @@ const Conditions = () => {
     {
       title: "Neck Pain",
       description: "Discomfort in the cervical spine area",
-      image: "https://images.unsplash.com/photo-1616279969096-54b228f6f4b8?w=400&auto=format&fit=crop&q=80",
+      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&auto=format&fit=crop&q=80",
     },
   ];
 
