@@ -11,9 +11,8 @@ const Header = () => {
   const navLinks = [
     { label: "Home", href: "/", isRoute: true },
     { label: "Treatments", href: "/treatments", isRoute: true },
-    { label: "Why KKT", href: isHomePage ? "#why-kkt" : "/#why-kkt", isRoute: !isHomePage },
+    { label: "Why KKT", href: "/why-kkt", isRoute: true },
     { label: "Blogs", href: isHomePage ? "#blogs" : "/#blogs", isRoute: !isHomePage },
-    { label: "Contact", href: isHomePage ? "#appointment" : "/#appointment", isRoute: !isHomePage },
   ];
 
   return (
