@@ -1,16 +1,19 @@
 import { useState } from "react";
 import { Phone, Menu, X, Mail, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   const navLinks = [
-    { label: "Home", href: "#" },
-    { label: "Treatments", href: "#treatments" },
-    { label: "Why KKT", href: "#why-kkt" },
-    { label: "Blogs", href: "#blogs" },
-    { label: "Contact", href: "#appointment" },
+    { label: "Home", href: "/", isRoute: true },
+    { label: "Treatments", href: "/treatments", isRoute: true },
+    { label: "Why KKT", href: isHomePage ? "#why-kkt" : "/#why-kkt", isRoute: !isHomePage },
+    { label: "Blogs", href: isHomePage ? "#blogs" : "/#blogs", isRoute: !isHomePage },
+    { label: "Contact", href: isHomePage ? "#appointment" : "/#appointment", isRoute: !isHomePage },
   ];
 
   return (
@@ -52,13 +55,23 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all"
-              >
-                {link.label}
-              </a>
+              link.isRoute ? (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all"
+                >
+                  {link.label}
+                </a>
+              )
             ))}
           </div>
 
@@ -83,14 +96,25 @@ const Header = () => {
           <div className="lg:hidden mt-4 pb-4 border-t border-border pt-4 animate-fade-in">
             <div className="flex flex-col gap-3">
               {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
+                link.isRoute ? (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors py-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors py-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                )
               ))}
               <Button className="mt-2 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold w-full">
                 Appointment
