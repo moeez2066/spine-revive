@@ -233,7 +233,7 @@ const WhyKKTPage = () => {
               Join thousands of patients who have found relief through our revolutionary treatment. 
               Book your consultation today and take the first step toward a pain-free life.
             </p>
-            <Link to="/#appointment">
+            <Link to="/appointment">
               <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
                 Book Appointment
                 <ArrowRight className="w-4 h-4 ml-2" />

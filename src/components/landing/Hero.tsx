@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Users, Trophy } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const stats = [
@@ -56,13 +57,15 @@ const Hero = () => {
             Australia's premier orthopedic clinic offering breakthrough non-invasive treatment tailored for individuals with spine-related disorders.
           </p>
           
-          <Button 
-            size="lg" 
-            className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6 shadow-glow animate-fade-in"
-            style={{ animationDelay: "0.3s" }}
-          >
-            Book Appointment
-          </Button>
+          <Link to="/appointment">
+            <Button 
+              size="lg" 
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6 shadow-glow animate-fade-in"
+              style={{ animationDelay: "0.3s" }}
+            >
+              Book Appointment
+            </Button>
+          </Link>
         </div>
 
         {/* Stats */}

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const treatments = [
@@ -15,7 +16,7 @@ const Footer = () => {
     { label: "Why KKT", href: "#why-kkt" },
     { label: "Treatment Process", href: "#process" },
     { label: "Success Stories", href: "#testimonials" },
-    { label: "Appointment", href: "#appointment" },
+    { label: "Appointment", href: "/appointment" },
     { label: "FAQs", href: "#faq" },
   ];
 
@@ -39,10 +40,12 @@ const Footer = () => {
               A global leader in non-surgical orthopedic & spine care providing lasting relief through advanced technology and proven protocols.
             </p>
             
-            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-              Book Appointment
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
+            <Link to="/appointment">
+              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+                Book Appointment
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
           </div>
 
           {/* Treatments */}
@@ -68,12 +71,21 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-background/70 hover:text-accent transition-colors text-sm"
-                  >
-                    {link.label}
-                  </a>
+                  {link.href.startsWith('/') ? (
+                    <Link
+                      to={link.href}
+                      className="text-background/70 hover:text-accent transition-colors text-sm"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="text-background/70 hover:text-accent transition-colors text-sm"
+                    >
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
