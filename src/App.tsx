@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Treatments from "./pages/Treatments";
 import WhyKKTPage from "./pages/WhyKKT";
 import Appointment from "./pages/Appointment";
+import Blogs from "./pages/Blogs";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/treatments" element={<Treatments />} />
           <Route path="/why-kkt" element={<WhyKKTPage />} />
           <Route path="/appointment" element={<Appointment />} />
+          <Route path="/blogs" element={<Blogs />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
