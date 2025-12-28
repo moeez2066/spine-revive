@@ -76,9 +76,11 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="flex items-center gap-4">
-            <Button className="hidden sm:flex bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-              Appointment
-            </Button>
+            <Link to="/appointment">
+              <Button className="hidden sm:flex bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+                Appointment
+              </Button>
+            </Link>
 
             {/* Mobile menu button */}
             <button
@@ -115,9 +117,11 @@ const Header = () => {
                   </a>
                 )
               ))}
-              <Button className="mt-2 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold w-full">
-                Appointment
-              </Button>
+              <Link to="/appointment" onClick={() => setIsMenuOpen(false)}>
+                <Button className="mt-2 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold w-full">
+                  Appointment
+                </Button>
+              </Link>
             </div>
           </div>
         )}

@@ -189,7 +189,7 @@ const Treatments = () => {
               Book a consultation with our specialists to discuss your condition and explore how KKT treatment can help you 
               achieve lasting relief from pain and improved quality of life.
             </p>
-            <Link to="/#appointment">
+            <Link to="/appointment">
               <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
                 Book Appointment
                 <ArrowRight className="w-4 h-4 ml-2" />
