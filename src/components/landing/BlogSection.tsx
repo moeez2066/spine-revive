@@ -10,7 +10,7 @@ const BlogSection = () => {
       title: "Mobilize Your Spine and Say Goodbye to Stiffness!",
       excerpt: "Back stiffness is becoming increasingly common. But you cannot just agonize this forever! You need to get out of this irksome sitch. You definitely require some fruitful tips to relish pain-free moments.",
       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    },
+    }, 
     {
       date: "September 28, 2024", 
       author: "Dr. James Chen",
