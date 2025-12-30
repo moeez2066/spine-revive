@@ -3,7 +3,7 @@ import { ArrowRight, Calendar, User } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const BlogSection = () => {
-  const articles = [
+  const articles = [ 
     {
       date: "October 1, 2024",
       author: "Dr. Sarah Mitchell",
