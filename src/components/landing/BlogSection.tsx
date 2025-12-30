@@ -1,25 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const BlogSection = () => {
   const articles = [
     {
-      date: "October 1, 2017",
-      author: "dev",
+      date: "October 1, 2024",
+      author: "Dr. Sarah Mitchell",
       title: "Mobilize Your Spine and Say Goodbye to Stiffness!",
       excerpt: "Back stiffness is becoming increasingly common. But you cannot just agonize this forever! You need to get out of this irksome sitch. You definitely require some fruitful tips to relish pain-free moments.",
       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
     {
-      date: "October 2, 2017",
-      author: "dev",
+      date: "September 28, 2024",
+      author: "Dr. James Chen",
       title: "Wait, There is Something Wrong with Your Kid's Backpack!",
       excerpt: "Many of us underestimate the very small things in our lives. Backpack is an utmost example. Whether you are going to school or you are going to travel, backpack will be there.",
       image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
     {
-      date: "October 2, 2017",
-      author: "dev",
+      date: "September 25, 2024",
+      author: "Dr. Emily Watson",
       title: "Avoiding Plane Rides Just Because of Backache? Read This!",
       excerpt: "Everyone adores airplane rides! You will love to go to Switzerland and France via airplane. But this back pain, it really hurts right? Imagine you are going to this beautiful trip.",
       image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -73,10 +74,12 @@ const BlogSection = () => {
                   {article.excerpt}
                 </p>
                 
-                <Button variant="link" className="p-0 h-auto text-primary font-medium">
-                  Read More
-                  <ArrowRight className="w-4 h-4 ml-1" />
-                </Button>
+                <Link to="/blogs">
+                  <Button variant="link" className="p-0 h-auto text-primary font-medium">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Button>
+                </Link>
               </div>
             </article>
           ))}

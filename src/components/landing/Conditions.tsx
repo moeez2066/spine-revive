@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Conditions = () => {
   const conditions = [
@@ -31,7 +32,7 @@ const Conditions = () => {
     {
       title: "Neck Pain",
       description: "Discomfort in the cervical spine area",
-      image: "https://images.unsplash.com/photo-1616279969096-54b228f6f4b8?w=400&auto=format&fit=crop&q=80",
+      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&auto=format&fit=crop&q=80",
     },
   ];
 
@@ -55,7 +56,8 @@ const Conditions = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {conditions.map((condition, index) => (
-            <div
+            <Link
+              to="/treatments"
               key={condition.title}
               className="group bg-card rounded-2xl overflow-hidden shadow-soft border border-border/50 hover:border-primary/30 hover:shadow-card transition-all duration-300 hover:-translate-y-1 cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -76,15 +78,17 @@ const Conditions = () => {
                   Learn more <ArrowRight className="w-4 h-4 ml-1" />
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
         <div className="text-center mt-10">
-          <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-            View All Conditions
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Button>
+          <Link to="/treatments">
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              View All Conditions
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
