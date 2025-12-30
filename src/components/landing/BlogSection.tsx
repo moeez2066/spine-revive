@@ -12,7 +12,7 @@ const BlogSection = () => {
       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
     {
-      date: "September 28, 2024",
+      date: "September 28, 2024", 
       author: "Dr. James Chen",
       title: "Wait, There is Something Wrong with Your Kid's Backpack!",
       excerpt: "Many of us underestimate the very small things in our lives. Backpack is an utmost example. Whether you are going to school or you are going to travel, backpack will be there.",
